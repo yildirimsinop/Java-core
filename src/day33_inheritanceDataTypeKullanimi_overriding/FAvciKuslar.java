@@ -64,12 +64,73 @@ public class FAvciKuslar extends EKuslar{
 
         avci2.beslenme(); // Avci kuslar
         avci2.gaga(); // Avci kuslar
-        // avci2.pence(); // Avci kuslar
+        // avci2.pence(); // CTE
         avci2.hareket(); // Avci kuslar
         avci2.cogalma(); // Kuslar
         avci2.kanat(); // Kuslar
         avci2.omur(); // Hayvanlar
         avci2.solunum(); // Kuslar
+
+        // Avci kuslar etle beslenir
+        //Avci kuslar sivri gagalidir
+        //Avci kuslar ucarlar
+        //Kuslar yumurta ile cogalirlar
+        //Kuslar kanatlidirlar
+        //Hayvanlar yasarlar ve olurler
+        //Kuslar akcigerle nefes alirlar
+
+        System.out.println("================");
+
+        DHayvanlar avci3 = new FAvciKuslar();
+
+        avci3.beslenme(); // Avci kuslar
+        // avci3.gaga(); // CTE
+        // avci3.pence(); // CTE
+        avci3.hareket(); // Avci kuslar
+        avci3.cogalma(); // Kuslar
+        // avci3.kanat(); // CTE
+        avci3.omur(); // Hayvanlar
+        avci3.solunum(); // Kuslar
+
+        // Avci kuslar etle beslenir
+        //Avci kuslar ucarlar
+        //Kuslar yumurta ile cogalirlar
+        //Hayvanlar yasarlar ve olurler
+        //Kuslar akcigerle nefes alirlar
+
+
+        EKuslar kus1 = new EKuslar();
+        kus1.cogalma(); // Kuslar
+        kus1.gaga(); // Kuslar
+        kus1.kanat(); // Kuslar
+        kus1.hareket(); //Hayvanlar
+        kus1.solunum(); // Kuslar
+        kus1.beslenme(); // Hayvanlar
+        kus1.omur(); // Hayvanlar
+
+
+        /*
+            Method'larla belirlenen ozelliklar en guncel bilgiyi bulurken
+
+            variable ile belirlenenn ozellikler ilk
+            buldugu degeri kullanir
+            bunun icin method'lara dinamik ozellik
+            variable'a statik ozellik denir.
+         */
+
+
+        DHayvanlar kus2 = new EKuslar();
+
+        kus2.cogalma(); // Kuslar
+       // kus2.gaga(); // CTE
+       // kus2.kanat(); // CTE
+        kus2.hareket(); //Hayvanlar
+        kus2.solunum(); // Kuslar
+        kus2.beslenme(); // Hayvanlar
+        kus2.omur(); // Hayvanlar
+
+
+
 
     }
 }
