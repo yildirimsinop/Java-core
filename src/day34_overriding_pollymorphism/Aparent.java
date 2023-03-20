@@ -6,13 +6,8 @@ public class Aparent {
 
         System.out.println("parent class method1");
     }
-    public void method2 (String str) {
+    public void method2 () {
 
         System.out.println("parent class method2");
-    }
-
-    public void method3 (String str) {
-
-        System.out.println("parent class method3");
     }
 }
