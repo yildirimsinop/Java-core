@@ -32,6 +32,13 @@ public class BChild extends Aparent {
 
         /*
            Overrideng method @Override notasyonu ile isaretlenebilir.
+           @override kullanilmayan overriding isleminde, parent class'daki
+           overridden method silinirse hic bir sorun olmaz.
+
+           Ancak @override kullanilmayan overriding isleminde, parent class'daki
+           overridden method silinirse veya signature'i degistirilirse
+           Java CTE verir, boylece overridden method'un
+           silinmesi engellenir.
 
          */
     }
