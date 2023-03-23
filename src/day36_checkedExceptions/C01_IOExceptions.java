@@ -1,4 +1,4 @@
-package ders36_checkedExceptions;
+package day36_checkedExceptions;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
