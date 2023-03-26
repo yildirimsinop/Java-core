@@ -18,7 +18,7 @@ public class I09_ChildOfI08 implements I08_InterfaceStaticVeDefaulstMethods{
 
     public static void main(String[] args) {
 
-        I09_ChildOfI08 obj = new I09_ChildOfI08()
+        I09_ChildOfI08 obj = new I09_ChildOfI08();
                 obj.method3();
 
         I08_InterfaceStaticVeDefaulstMethods.method4();
