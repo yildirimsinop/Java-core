@@ -6,8 +6,27 @@ public class I07_ConcreteCholdOf2Interfaces implements I05_Interface, I06_Interf
         1- Bir class sadece bir class'a extends edilebilir ancak birden fazla interface'e
         implements edilebilir.
 
-        2- Concrete child class implement ettigi tum
+        2- Concrete child class implement ettigi tum interface'lerdeki abstract method'lari
+        override etmek zorunda oldugundan iki interface'deki tum method'lari override etmek gerekir.
+            - Iki interface de ayni isimde ve ayni return type'a sahip methdod'lardan hangisini override
+              ettigi onemli degildir.
+            - Ancak isimler ayni return type'lar farkli oldugundan iki interface'i birden implement
+              etmemiz mumkun olmayacktir.
+              bu durumda
+                *) ya class'dan bu iki interface'i implemnts etmekten vazgecmelisiniz
+                *) veya sisteme mudahale imkaniniz varsa bu conflickt'i cozmelisiniz.
+         3- Child class'dan parent Interface'lerdeki variable'lari kullanmak istersek
+            - ayni isimde iki interface'de de variable varsa, tercihinizi belirtmelisiniz
+              interfaceIsmi.variableIsmi seklinde tercih yapmalisiniz.
+            - Kullanacagimiz variable sadece 1 interface'de varsa sadece variable ismi
+              yazmak yeterli olacaktir.
      */
+
+    public static void main(String[] args) {
+        System.out.println(I06_Interface.MESAJ);
+        System.out.println(I05_Interface.SAYI);
+        System.out.println(SAYI2);
+    }
     @Override
     public void mehthod1() {
 
@@ -19,8 +38,8 @@ public class I07_ConcreteCholdOf2Interfaces implements I05_Interface, I06_Interf
     }
 
     @Override
-    public int method2() {
-        return 0;
+    public String method2() {
+        return null;
     }
 
     @Override
