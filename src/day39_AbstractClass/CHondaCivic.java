@@ -12,6 +12,9 @@ public class CHondaCivic extends BHonda {
     public void kasa() {
 
         System.out.println("Civic sedan veya hb kasa kullanir");
+        String kasa = new String();
+        kasa = "sedan";
+        System.out.println("Honda arabalar :" + kasa);
 
     }
 
@@ -32,13 +35,11 @@ public class CHondaCivic extends BHonda {
     @Override
     public void guvenlik() {
 
-        System.out.println("civic araclar guvenlik standartlarina uygundur.");
-
     }
 
     @Override
     public void abs() {
-        System.out.println("Honda Civic arabalar standart olarak abs kullanir.");
+        // System.out.println("Honda Civic arabalar standart olarak abs kullanir.");
     }
 
     @Override
@@ -62,6 +63,9 @@ public class CHondaCivic extends BHonda {
         civic1.abs();  // Araba
         civic1.klima();  // Araba
         civic1.marka(); // Honda
+        civic1.kasa();
         civic1.ozelTeknoloji(); // Honda
+        civic1.guvenlik();
+        civic1.yakit();
     }
 }
