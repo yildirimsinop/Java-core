@@ -2,6 +2,7 @@ package day39_AbstractClass;
 
 public class BToyota extends Araba {
 
+
     @Override
     public void motor() {
 
@@ -21,4 +22,5 @@ public class BToyota extends Araba {
     public void tekerlek() {
 
     }
+
 }
