@@ -26,5 +26,19 @@ public class C02_maps {
             108=Hikmet-Han-10-M-TM
             }
          */
+
+        // 108 numarali ogrencinin isim ve soyismini yazdirin
+        System.out.println(MapDepo.isimSoyIsimDondur(ogrenciMap, 108));
+
+        // 104 numarali ogrencinin subesini K yapin
+        // method'da istenen Key map'de varsa degistirip map'i geri dondurelim
+        // yoksa hic bir islem yapmadan map'i geri dondurelim
+
+        int ogrenciKey = 105;
+        String yeniSube = "N";
+        ogrenciMap = MapDepo.ogrenciyeYeniSubeAta(ogrenciMap, ogrenciKey, yeniSube);
+        System.out.println(ogrenciMap);
+
+
     }
 }

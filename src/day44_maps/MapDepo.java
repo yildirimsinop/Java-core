@@ -22,18 +22,6 @@ public class MapDepo {
 
     public static String isimSoyIsimDondur(Map<Integer, String> ogrenciMap, int ogrenciKey) {
 
-        /*
-            {
-            101=Ali-Can-10-H-MF,
-            102=Veli-Cem-11-M-Soz,
-            103=Ali-Cem-11-H-TM,
-            104=Ayse-Can-10-H-MF,
-            105=Ayse-Cem-11-M-TM,
-            106=Fatma-Han-10-K-Soz
-            }
-
-            ogrenciKey = 105
-         */
 
         String ogrenciValue = ogrenciMap.get(ogrenciKey); // Ayse-Can-10-H-MF
 
@@ -43,5 +31,33 @@ public class MapDepo {
 
         return isimSoyisim;
 
+    }
+
+    public static Map<Integer, String> ogrenciyeYeniSubeAta(Map<Integer, String> ogrenciMap, int ogrenciKey, String yeniSube) {
+
+        // yoksa gelen map'i aynen geri dondurecegiz.
+        // ogrenci key map'de var mi?
+
+       if ( ogrenciMap.containsKey(ogrenciKey)) {
+           // istenen Key varsa, update edip yeni map'i dondurecegiz
+
+           String istenenKeyinValuesu = ogrenciMap.get(ogrenciKey); // Ayse-Can-10-H-MF
+           String [] istenenKeyValueArr = istenenKeyinValuesu.split("-"); // [Ayse, Can, 10, H, MF]
+           // yeni sube degerini atayalim
+
+           istenenKeyValueArr [3] = yeniSube; // [Ayse, Can, 10, H, MF]
+
+           String istenenKeyinYeniValesu =  istenenKeyValueArr[0] + "- " +
+                                            istenenKeyValueArr[1] + "- " +
+                                            istenenKeyValueArr[2] + "- " +
+                                            istenenKeyValueArr[3] + "- " +
+                                            istenenKeyValueArr[4];
+
+
+                   ogrenciMap.put(ogrenciKey, istenenKeyinYeniValesu );
+
+
+       }
+       return ogrenciMap;
     }
 }
