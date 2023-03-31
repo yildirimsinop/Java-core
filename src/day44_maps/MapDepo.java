@@ -1,8 +1,6 @@
 package day44_maps;
 
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class MapDepo {
 
@@ -81,6 +79,62 @@ public class MapDepo {
                 System.out.println(valueArr[0] + " " + valueArr[1] + " " + valueArr[2]);
             }
 
+        }
+    }
+
+    public static List<String> numaraDegerineGoreListeOlustur(Map<Integer, String> ogrenciMap, int basNo, int bitisNo) {
+
+        // hem Key, hemde value lazim oldugundan keySet'i olusturduk sonra o key uzerinden value'yu map'den aldik.
+
+       Set<Integer> ogrenciKeySeti = ogrenciMap.keySet();
+
+       // dondurecegimiz Listeyi olusturalim
+
+        List<String> isimListesi = new ArrayList<>();
+
+        // Key degerlerini tek tek elden gecirip istenen aralikta olanlari bulalim.
+
+        String value;
+        String [] valueArr;
+        String istenenIsim;
+
+        for (Integer eachKey: ogrenciKeySeti
+             ) {
+
+            if (basNo<= eachKey && eachKey<=bitisNo) {
+                // buraya verilen sinir degerlerine uyan
+                // eachKey'ler gelecek
+
+                // sinira uygun key'in value'sunu alalim
+
+                value = ogrenciMap.get(eachKey); // Ayse-Cem-11-M-TM
+                // value'u parcalara ayilarim
+                valueArr = value.split("-"); // [Ayse, Cem, 11, M, TM]
+
+                //value array'inden Listeye ekleyelim
+                istenenIsim = valueArr[0] + " " + valueArr [1] + " " + valueArr [4];
+
+                //istenen ismi olusturduk, bunu listeye ekleyelim.
+
+                isimListesi.add(istenenIsim);
+            }
+        }
+
+        return isimListesi;
+    }
+
+    public static void numaraIsimSoyisimYazdir(Map<Integer, String> ogrenciMap) {
+
+        Set<Integer> keySeti = ogrenciMap.keySet();
+        String value;
+        String [] valueArr;
+
+        for (Integer eachKey: keySeti
+             ) {
+            value = ogrenciMap.get(eachKey);
+            valueArr=value.split("-"); // [Ayse, Cem, 11, M, TM]
+
+            System.out.println(eachKey + " " + valueArr [0] + " " + valueArr [1]);
         }
     }
 }
