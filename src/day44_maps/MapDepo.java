@@ -1,5 +1,6 @@
 package day44_maps;
 
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -59,5 +60,27 @@ public class MapDepo {
 
        }
        return ogrenciMap;
+    }
+
+    public static void subeOgrenciBilgileriniYazdir(Map<Integer, String> ogrenciMap, String subeAdi) {
+
+        Collection<String> valueCollection =ogrenciMap.values();
+
+        System.out.println("Isim  Soyisim  Sinif");
+        System.out.println("====================");
+
+        for (String eachValue: valueCollection
+             ) {
+            // value'yu parcalarina ayir
+
+            String [] valueArr = eachValue.split("-"); // [Ayse, Can, 10, H, MF]
+            // sube ismini kontrol et, istenen sube ise isim, soyisim, sinif yazdir.
+
+            if (valueArr[3].equals(subeAdi)) {
+
+                System.out.println(valueArr[0] + " " + valueArr[1] + " " + valueArr[2]);
+            }
+
+        }
     }
 }
