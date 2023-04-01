@@ -22,6 +22,8 @@ public class C01_EntrySet {
         System.out.println(ogrenciMap);
         System.out.println(ogrenciMap.size());
 
+        ogrenciMap.put(108, "Mehmet-Erkan-12-K-MF");
+
 
         Set<Map.Entry<Integer, String>> ogrenciEntrySeti = ogrenciMap.entrySet();
         System.out.println(ogrenciEntrySeti);
