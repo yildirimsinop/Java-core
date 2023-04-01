@@ -67,6 +67,52 @@ public class C01_EntrySet {
         // Entry'leri kullanarak tum ogrencilerin siniflarini 1 artirin
         // 12. sinifta olan varsa, map'ten cikarin
 
+        // Tum entry'leri elden gecirelim
+        String enteryValue;
+        String [] entryValueArr;
+
+        String entryValue;
+
+        for (Map.Entry<Integer, String> eachEntry : ogrenciEntrySeti
+             ) {
+            // Herbir entry'deki value'yu alip, parcalayp istenen update'i yapip, yeniden map'e eklememiz lazim
+            entryValue=eachEntry.getValue(); // Ali-Can-10-H-MF
+            entryValueArr= entryValue.split("-");
+
+            if (entryValueArr[2].equals("12")) {
+              // ogrencinin sinifi 12 ise
+
+                eachEntry.setValue("Mezun oldu");
+
+            } else {
+                // ogrencinin sinifi 12 degilse
+                int sinif = Integer.parseInt(entryValueArr[2]);
+                sinif ++;
+
+                entryValueArr[2] = sinif + ""; // [Ali, Can, 11, H, MF]
+
+                eachEntry.setValue(entryValueArr[0]+ "-" +
+                                   entryValueArr[1]+ "-" +
+                                   entryValueArr[2]+ "-" +
+                                   entryValueArr[3]+ "-" +
+                                   entryValueArr[4]);
+            }
+
+        }
+
+        System.out.println(ogrenciMap);
+
+        /*
+        {
+        101=Ali-Can-11-H-MF,
+        102=Veli-Cem-12-M-Soz,
+        103=Ali-Cem-12-H-TM,
+        104=Ayse-Can-11-H-MF,
+        105=Ayse-Cem-12-M-TM,
+        106=Fatma-Han-11-K-Soz
+        }
+         */
+
 
 
 
