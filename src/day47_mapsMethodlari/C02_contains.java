@@ -5,7 +5,7 @@ import day44_maps.MapDepo;
 import java.util.HashMap;
 import java.util.Map;
 
-public class C02_MapsMethodlari {
+public class C02_contains {
     public static void main(String[] args) {
 
         Map<Integer, String> ogrenciMap = MapDepo.ornekMapOlustur();

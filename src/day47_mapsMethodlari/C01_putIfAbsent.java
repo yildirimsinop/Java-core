@@ -3,7 +3,7 @@ package day47_mapsMethodlari;
 import java.util.HashMap;
 import java.util.Map;
 
-public class C01_maptsMethodlari {
+public class C01_putIfAbsent {
     public static void main(String[] args) {
 
         Map<String, Integer> mp1 = new HashMap<>();
