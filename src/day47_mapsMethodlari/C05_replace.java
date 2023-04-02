@@ -29,5 +29,8 @@ public class C05_replace {
         // verdigimiz key'e ait value verdigimiz deger ise yenisi ile degistirir,
         // yoksa ignore eder.
 
+        System.out.println(mp1.getOrDefault("C", 44)); // 10
+        System.out.println(mp1.getOrDefault("D", 44)); //44
+
     }
 }
