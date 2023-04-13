@@ -9,7 +9,7 @@ public class Corolla extends BToyota{
     public static void main(String[] args) {
 
         /*
-             Bir bije olusturulurken
+             Bir obje olusturulurken
              data turu ve constructor ayni class'dan ise
              bir VARIABLE'in degerini bulmak icin o
              class'a gideriz. O class'da yoksa sirasiyla
@@ -40,7 +40,7 @@ public class Corolla extends BToyota{
         /*
            Obje olusturulurken data turu ve constructor
            farkli ise VARIABLE'in degerini bulmak icin
-           Data turu olan class'a gidili. Varsa kullanilir,
+           Data turu olan class'a gidilir. Varsa kullanilir,
            yoksa o class'in parent'larina bakilir.
            Bulunamazsa CTE verir. Geri vites yapmaz.
          */
